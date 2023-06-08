@@ -1,0 +1,162 @@
+.main {
+  background-color: var(--background);
+  &__text {
+    color: $main-color;
+    text-align: justify;
+  }
+}
+
+/* ---- Home ---- */
+
+.home {
+  position: relative;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 65px;
+  &__bg {
+    top: 0;
+    position: absolute;
+    background-color: var(--second-bg);
+    height: 100%;
+    width: 100%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
+  &__title {
+    font-family: 'Libre Baskerville', serif;
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    margin-bottom: 5px;
+    z-index: 1;
+  }
+  &__subtitle {
+    font-size: 1.5rem;
+    color: var(--second-color);
+    font-weight: 300;
+    z-index: 1;
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 6% 65px 6%;
+  overflow: hidden;
+  &__title {
+    width: 40%;
+    padding-bottom: 8px;
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    text-align: center;
+    border-bottom: 2px solid var(--main-color);
+    margin-bottom: 25px;
+  }
+}
+
+/* ---- Projects ---- */
+
+.projects {
+  &__list {
+    display: grid;
+    grid-template-rows: auto;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    padding: 5%;
+    margin-bottom: 35px;
+    background: linear-gradient(var(--background), var(--second-bg));
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    &--img {
+      width: 310px;
+      height: 310px;
+      border-radius: 50%;
+      filter: saturate(0);
+    }
+    &--title {
+      color: var(--main-color);
+      padding-bottom: 5px;
+      margin: 25px 0;
+      border-bottom: 1px solid var(--background);
+    }
+    &--text {
+      margin-bottom: 10px;
+      color: var(--main-color);
+      max-width: 90%;
+    }
+  }
+}
+
+.item {
+  &__nav {
+    margin: 20px 0;
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    &--link {
+      color: var(--background);
+      font-size: 1.2rem;
+      &:hover {
+        color: var(--main-color);
+      }
+    }
+  }
+  &__icon {
+    color: var(--main-color);
+    position: relative;
+    left: 5px;
+    bottom: 1px;
+    font-size: 0.8rem;
+  }
+  &__link {
+    color: var(--background);
+    font-weight: 300;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* ---- Projects: ACTIVE STATES ---- */
+
+.img-cover {
+  position: absolute;
+  width: 310px;
+  height: 310px;
+  border-radius: 50%;
+  background-color: var(--second-bg);
+  z-index: 1;
+}
+
+.projects__item:hover .img-cover {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.projects__item:hover .projects__item--img {
+  filter: saturate(100%);
+}
+
+/* ---- Resume ---- */
+
+.resume {
+  &__option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+  &__language {
+    color: var(--main-color);
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+  }
+}
