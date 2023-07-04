@@ -5,13 +5,13 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 15px;
-  background-color: var(--main-color);
+  background-color: $main-color;
   border-radius: 15px;
-  color: var(--second-color);
+  color: $second-color;
   text-transform: uppercase;
   &:hover {
-    color: var(--main-color);
-    background-color: var(--background);
+    color: $main-color;
+    background-color: $background;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: 0.2s ease;
   }
